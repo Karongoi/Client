@@ -9,7 +9,7 @@ const AvailableMentors = () => {
     const fetchMentors = async () => {
       const token = localStorage.getItem("token");
       try {
-        const res = await axios.get("http://localhost:5000/auth/journeymen", {
+        const res = await axios.get("https://construction-connect-platform.onrender.com/auth/journeymen", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setMentors(res.data);
@@ -24,7 +24,7 @@ const AvailableMentors = () => {
     const token = localStorage.getItem("token");
     try {
       const res = await axios.post(
-        "http://localhost:5000/mentorship/request",
+        "https://construction-connect-platform.onrender.com/mentorship/request",
         { mentor_id: mentorId },
         { headers: { Authorization: `Bearer ${token}` } }
       );

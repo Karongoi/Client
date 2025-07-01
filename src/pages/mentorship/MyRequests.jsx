@@ -8,7 +8,7 @@ const MyRequests = () => {
     const fetchRequests = async () => {
       const token = localStorage.getItem("token");
       try {
-        const res = await axios.get("http://localhost:5000/mentorship/requests/sent", {
+        const res = await axios.get("https://construction-connect-platform.onrender.com/mentorship/requests/sent", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setRequests(res.data);

@@ -8,7 +8,7 @@ const MyMentors = () => {
     const fetchMentors = async () => {
       const token = localStorage.getItem("token");
       try {
-        const res = await axios.get("http://localhost:5000/mentorship/my-mentors", {
+        const res = await axios.get("https://construction-connect-platform.onrender.com/mentorship/my-mentors", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setMentors(res.data);

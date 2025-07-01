@@ -19,7 +19,7 @@ function AskQuestion() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:5000/questions/", {
+      const res = await fetch("https://construction-connect-platform.onrender.com/questions/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

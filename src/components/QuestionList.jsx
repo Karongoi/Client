@@ -6,7 +6,7 @@ function QuestionList() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:5000/questions/", {
+    fetch("https://construction-connect-platform.onrender.com/questions/", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

@@ -9,7 +9,7 @@ const ManagerDashboard = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:5000/manager/dashboard", {
+      .get("https://construction-connect-platform.onrender.com/manager/dashboard", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setStats(res.data))
